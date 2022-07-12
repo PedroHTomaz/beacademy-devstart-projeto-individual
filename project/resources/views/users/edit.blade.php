@@ -1,9 +1,10 @@
 @extends('template.users')
-@section('title', 'Novo Usuário')
+@section('title', 'Usuário {$user->name}')
 @section('body')
-    <h1>Cadastrar</h1>
+    <h1>Usuário {{ $user->name }}</h1>
 
-    <form action="{{ route('users.store') }}" method="POST">
+    <form action="{{ route('users.update', $user->id) }}" method="POST">
+        @method('PUT')
         @csrf
         <div class="form-group">
             <label for="name">Nome</label>
@@ -24,7 +25,7 @@
             <label for="date">Data de Nascimento</label>
             <input type="date" class="form-control" id="birthDate" name="birthDate" placeholder="Digite sua data de nascimento">
 
-            <label for="description">Breve descrição</label>
+            <label for="description">Breve descrição sobre você</label>
             <textarea name="description" id="description"></textarea>
 
             <div class="my-3">
@@ -43,6 +44,6 @@
             <label for="address" class="form-label">Endereço Completo</label>
             <input type="text" class="form-control" id="address" name="address" placeholder="Digite seu endereço">            
         </div>
-        <button type="submit" class="mt-3 btn btn-primary">Cadastrar</button>
+        <button type="submit" class="mt-3 btn btn-primary">Atualizar</button>
     </form>
 @endsection
