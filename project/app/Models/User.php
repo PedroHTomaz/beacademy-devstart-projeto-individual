@@ -18,11 +18,10 @@ class User extends Authenticatable
         'email',
         'password',
         'remember_token',
-        'cpf',
         'tel',
         'birthDate',
         'education',
-        'address',
+        'city',
     ];
 
     protected $hidden = [

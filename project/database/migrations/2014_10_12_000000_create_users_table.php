@@ -16,11 +16,10 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->string('cpf');
             $table->string('tel');
             $table->string('birthDate');
             $table->string('education');
-            $table->string('address');
+            $table->string('city');
             $table->timestamps();
         });
     }

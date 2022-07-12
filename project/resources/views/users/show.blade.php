@@ -9,11 +9,10 @@
                     <th scope="col">NOME</th>
                     <th scope="col">DESCRIÇÃO</th>
                     <th scope="col">E-MAIL</th>
-                    <th scope="col">CPF</th>
                     <th scope="col">TEL</th>
                     <th scope="col">DATA DE NASCIMENTO</th>
                     <th scope="col">EDUCAÇÃO</th>
-                    <th scope="col">ENDEREÇO</th>
+                    <th scope="col">CIDADE</th>
                     <th scope="col">AÇÕES</th>
                 </tr>
             </thead>
@@ -23,11 +22,10 @@
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->description }}</td>
                     <td>{{ $user->email }}</td>
-                    <td>{{ $user->cpf }}</td>
                     <td>{{ $user->tel }}</td>
                     <td>{{ $user->birthDate }}</td>
                     <td>{{ $user->education }}</td>
-                    <td>{{ $user->address }}</td>
+                    <td>{{ $user->city }}</td>
                     <td>
                         <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning btn-sm">EDITAR</a>
                         <form action="{{ route('users.destroy', $user->id) }}" method="POST">

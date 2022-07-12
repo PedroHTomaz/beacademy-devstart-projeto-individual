@@ -58,7 +58,7 @@ class UserController extends Controller
             return redirect()->route('users.index');
         }
 
-        $data = $request->only('name', 'email', 'cpf', 'tel', 'date', 'description', 'education', 'address');
+        $data = $request->only('name', 'email', 'tel', 'birthDate', 'description', 'education', 'city');
         if($request->password){
             $data['password'] = bcrypt($request->password);
         }

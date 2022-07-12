@@ -6,7 +6,6 @@
             <thead class="text-center">
                 <tr>
                     <th scope="col">ID</th>
-                    <!-- <th scope="col">FOTO</th> -->
                     <th scope="col">NOME</th>
                     <th scope="col">DESCRIÇÃO</th>
                     <th scope="col">AÇÕES</th>
@@ -16,7 +15,6 @@
                 @foreach($users as $user)
                 <tr>
                     <th scope="row">{{ $user->id }}</th>
-                    <!-- <td>{{ $user->photo }}</td> -->
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->description }}</td>
                     <td>

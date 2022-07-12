@@ -16,9 +16,6 @@
             <label for="password">Senha</label>
             <input type="password" class="form-control" id="password" name="password" placeholder="Digite sua senha">
         
-            <label for="cpf">CPF</label>
-            <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Digite seu CPF">
-        
             <label for="tel">Telefone</label>
             <input type="tel" class="form-control" id="tel" name="tel" placeholder="Digite seu telefone">
         
@@ -41,8 +38,8 @@
                 </select>
             </div>
 
-            <label for="address" class="form-label">Endereço Completo</label>
-            <input type="text" class="form-control" id="address" name="address" placeholder="Digite seu endereço">            
+            <label for="city" class="form-label">Endereço Completo</label>
+            <input type="text" class="form-control" id="city" name="city" placeholder="Digite seu endereço">            
         </div>
         <button type="submit" class="mt-3 btn btn-primary">Atualizar</button>
     </form>
