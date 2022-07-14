@@ -1,26 +1,25 @@
 @extends('template.users')
 @section('title', 'Contrata Dev - Novo Usuário')
 @section('body')
-<div class="d-flex flex-row-reverse justify-content-center align-items-center home">
-    <h1 class="text-center mb-4">Cadastrar</h1>
-
+<div class="d-flex align-items-center my-5">
     <div>
-        <img src="{{ asset('assets/developer.svg') }}" alt="ilustração de uma pessoa no computador" height="400 rem" class="img-fluid col-8">
+        <img src="{{ asset('assets/developer.svg') }}" alt="ilustração de uma pessoa no computador" class="img-fluid col-8">
     </div>
-    <div>
-        <form action="{{ route('users.store') }}" method="POST" class="w-50 ms-auto">
+    <div class="w-50">
+        <h1 class="text-center mb-4">Cadastrar</h1>
+        <form action="{{ route('users.store') }}" method="POST">
             @csrf
             <div class="form-group">
-                <label for="name" class="pb-2">Nome</label>
+                <label for="name" class="pb-2">Nome:</label>
                 <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome">
 
-                <label for="description" class="py-2">Breve descrição sobre você</label><br>
+                <label for="description" class="py-2">Breve descrição sobre você:</label><br>
                 <textarea name="about" id="about" class="form-control"></textarea>
                 
-                <label for="email" class="py-2">E-mail</label>
+                <label for="email" class="py-2">E-mail:</label>
                 <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail">
                 
-                <label for="password" class="py-2">Senha</label>
+                <label for="password" class="py-2">Senha:</label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="Digite sua senha">
 
                 <div class="my-3">
@@ -36,8 +35,8 @@
                     </select>
                 </div>
 
-                <label for="city" class="py-2">Cidade</label>
-                <input type="text" class="form-control" id="city" name="city" placeholder="Digite seu endereço">
+                <label for="city" class="py-2">Cidade:</label>
+                <input type="text" class="form-control" id="city" name="city" placeholder="Digite sua cidade">
             </div>
             <button type="submit" class="mt-3 btn btn-primary">Cadastrar</button>
         </form>
