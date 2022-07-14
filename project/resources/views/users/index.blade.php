@@ -1,5 +1,5 @@
 @extends('template.users')
-@section('title', 'Usuários')
+@section('title', 'Contrata Dev - Usuários')
 @section('body')
         <h1>Usuários</h1>
 
@@ -21,7 +21,8 @@
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">NOME</th>
-                    <th scope="col">DESCRIÇÃO</th>
+                    <th scope="col">SOBRE</th>
+                    <th scope="col">CIDADE</th>
                     <th scope="col">AÇÕES</th>
                 </tr>
             </thead>
@@ -30,7 +31,8 @@
                 <tr>
                     <th scope="row">{{ $user->id }}</th>
                     <td>{{ $user->name }}</td>
-                    <td>{{ $user->description }}</td>
+                    <td>{{ $user->about }}</td>
+                    <td>{{ $user->city }}</td>
                     <td>
                         <a href="{{ route('users.show', $user->id) }}" class="btn btn-info">VISUALIZAR</a>
                     </td>

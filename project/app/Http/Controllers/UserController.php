@@ -26,6 +26,11 @@ class UserController extends Controller
         return view('users.create');
     }
 
+    public function login()
+    {
+        return view('users.login');
+    }
+
     public function store(Request $request)
     {
         $data = $request->all();
@@ -60,7 +65,7 @@ class UserController extends Controller
             return redirect()->route('users.index');
         }
 
-        $data = $request->only('name', 'email', 'tel', 'birthDate', 'description', 'education', 'city');
+        $data = $request->only('name', 'email', 'about', 'education', 'city');
         if($request->password){
             $data['password'] = bcrypt($request->password);
         }

@@ -1,5 +1,5 @@
 @extends('template.users')
-@section('title', 'Visualizar Usuário')
+@section('title', 'Contrata Dev - Visualizar Usuário')
 @section('body')
         <h1>Usuário - {{ $user->name }}</h1>
         <table class="table table-bordered table-dark">
@@ -7,10 +7,8 @@
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">NOME</th>
-                    <th scope="col">DESCRIÇÃO</th>
+                    <th scope="col">SOBRE</th>
                     <th scope="col">E-MAIL</th>
-                    <th scope="col">TEL</th>
-                    <th scope="col">DATA DE NASCIMENTO</th>
                     <th scope="col">EDUCAÇÃO</th>
                     <th scope="col">CIDADE</th>
                     <th scope="col">AÇÕES</th>
@@ -20,10 +18,8 @@
                 <tr>
                     <th scope="row">{{ $user->id }}</th>
                     <td>{{ $user->name }}</td>
-                    <td>{{ $user->description }}</td>
+                    <td>{{ $user->about }}</td>
                     <td>{{ $user->email }}</td>
-                    <td>{{ $user->tel }}</td>
-                    <td>{{ $user->birthDate }}</td>
                     <td>{{ $user->education }}</td>
                     <td>{{ $user->city }}</td>
                     <td>

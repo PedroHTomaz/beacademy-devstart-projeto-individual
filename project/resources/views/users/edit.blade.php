@@ -1,5 +1,5 @@
 @extends('template.users')
-@section('title', 'Editar')
+@section('title', 'Contrata Dev - Editar')
 @section('body')
     <div class="my-3">
         <h1 class="text-center mb-4">Usuário - {{ $user->name }}</h1>
@@ -11,20 +11,14 @@
                 <label for="name" class="pb-2">Nome</label>
                 <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome">
 
-                <label for="description" class="py-2">Breve descrição</label><br>
-                <textarea name="description" id="description" class="form-control"></textarea>
+                <label for="description" class="py-2">Breve descrição sobre você</label><br>
+                <textarea name="about" id="about" class="form-control"></textarea>
             
                 <label for="email" class="py-2">E-mail</label>
                 <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail">
             
                 <label for="password" class="py-2">Senha</label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="Digite sua senha">
-            
-                <label for="tel" class="py-2">Telefone</label>
-                <input type="tel" class="form-control" id="tel" name="tel" placeholder="Digite seu telefone">
-            
-                <label for="date" class="py-2">Data de Nascimento</label>
-                <input type="date" class="form-control" id="birthDate" name="birthDate" placeholder="Digite sua data de nascimento">
 
                 <div class="my-3">
                     <label for="education" class="pb-2">Escolaridade: </label>
