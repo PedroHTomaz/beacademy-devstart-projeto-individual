@@ -9,8 +9,15 @@
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 </head>
 <body>
+    <nav>
+        <header>
+            <ul>
+                <li><a href="/">HOME</a></li>
+            </ul>
+        </header>
+    </nav>
     <div class="container">
         @yield('body')
-    </div>
+    </div>      
 </body>
 </html>

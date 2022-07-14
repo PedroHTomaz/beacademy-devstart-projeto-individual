@@ -10,8 +10,10 @@
             E o melhor: de maneira <strong>SIMPLES</strong> e <strong>FÁCIL</strong>.
         </p>
         <div class="text-end">
-            <a href="{{ route('users.login') }}" class="btn btn-primary my-2">ENTRAR</a>
-            <a href="{{ route('users.create') }}" class="btn btn-outline-primary px-4 ms-3">CADASTRAR</a>
+            @if(!Auth::User())
+                <a href="{{ route('users.login') }}" class="btn btn-primary my-2">ENTRAR</a>
+                <a href="{{ route('users.create') }}" class="btn btn-outline-primary px-4 ms-3">CADASTRAR</a>
+            @endif
         </div>
     </div>
     <div>
