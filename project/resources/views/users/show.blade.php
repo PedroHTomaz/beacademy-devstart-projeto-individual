@@ -1,36 +1,28 @@
 @extends('template.users')
 @section('title', 'Contrata Dev - Visualizar Usuário')
 @section('body')
-        <h1>Usuário - {{ $user->name }}</h1>
-        <table class="table table-bordered table-dark">
-            <thead class="text-center">
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">NOME</th>
-                    <th scope="col">SOBRE</th>
-                    <th scope="col">E-MAIL</th>
-                    <th scope="col">EDUCAÇÃO</th>
-                    <th scope="col">CIDADE</th>
-                    <th scope="col">AÇÕES</th>
-                </tr>
-            </thead>
-            <tbody class="text-center">
-                <tr>
-                    <th scope="row">{{ $user->id }}</th>
-                    <td>{{ $user->name }}</td>
-                    <td>{{ $user->about }}</td>
-                    <td>{{ $user->email }}</td>
-                    <td>{{ $user->education }}</td>
-                    <td>{{ $user->city }}</td>
-                    <td>
-                        <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning btn-sm">EDITAR</a>
-                        <form action="{{ route('users.destroy', $user->id) }}" method="POST">
-                            @method('DELETE')
-                            @csrf
-                            <button type="submit" class="btn btn-danger btn-sm">EXCLUIR</button>
-                        </form>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+<div class='container'>
+   <h1 class="mt-5 mb-4 text-primary">{{ $user->name }}</h1> 
+   <div class="row">
+        <div class="col-sm-8">
+            <div class="card">
+                <!--<img src="">-->
+                <div class="card-body">
+                    <h3 class="card-title">{{ $user->name }}</h3>
+                    <span><strong>Sobre</strong>: {{ $user->about }}</span>
+                    <span><strong>Cidade</strong>: {{ $user->city }}</span><br>
+                    <span><strong>Contato</strong>: {{ $user->email }}</span><br>
+                    <span><strong>Escolaridade</strong>: {{ $user->education }}</span><br>
+                    <span><strong>Data de cadastro</strong>: {{ $user->created_at }}</span><br>
+                    <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning btn-sm">EDITAR</a>
+                    <form action="{{ route('users.destroy', $user->id) }}" method="POST">
+                        @method('DELETE')
+                        @csrf
+                        <button type="submit" class="btn btn-danger btn-sm">EXCLUIR</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
