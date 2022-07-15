@@ -11,7 +11,7 @@
         </p>
         <div class="text-end">
             @if(!Auth::User())
-                <a href="{{ route('users.login') }}" class="btn btn-primary my-2">ENTRAR</a>
+                <a href="{{ route('login') }}" class="btn btn-primary my-2">ENTRAR</a>
                 <a href="{{ route('users.create') }}" class="btn btn-outline-primary px-4 ms-3">CADASTRAR</a>
             @endif
         </div>
