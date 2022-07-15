@@ -9,12 +9,9 @@
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 </head>
 <body>
-    <nav>
-        <header>
-            <ul>
-                <li><a href="/">HOME</a></li>
-            </ul>
-        </header>
+    <nav class="d-flex justify-content-end gap-3 container py-3">
+        <a href="/" class="btn btn-outline-dark">HOME</a>
+        <a href="{{ route('users.index') }}" class="btn btn-outline-dark">VISUALIZAR CANDINDATOS</a>
     </nav>
     <div class="container">
         @yield('body')
