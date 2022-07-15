@@ -14,6 +14,7 @@ class User extends Authenticatable
 
     protected $fillable = [
         'name',
+        'is_admin',
         'about',
         'email',
         'password',
@@ -39,7 +40,7 @@ class User extends Authenticatable
                 $query->orWhere('name', 'LIKE', "%{$search}%");
             }
         })
-        ->paginate(5);
+        ->paginate(8);
 
         return $users;
     }

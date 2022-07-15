@@ -30,5 +30,8 @@
             </div>
         @endforeach
     </div>
+    <div class="justify-content-center pagination">
+        {{ $users->links('pagination::bootstrap-5') }}
+    </div>
 </div>
 @endsection

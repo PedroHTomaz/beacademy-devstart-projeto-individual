@@ -10,6 +10,17 @@
 </head>
 <body>
     <nav class="d-flex justify-content-end gap-3 container py-3">
+        @if(Auth::user())
+            <a href="#" class="btn btn-outline-primary">{{ Auth::user()->name }}</a>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <a class="btn btn-danger"><span :href="route('logout')"
+                    onclick="event.preventDefault();
+                        this.closest('form').submit();">
+                    {{ __('Sair') }}
+                <span></a>
+            </form>
+        @endif
         <a href="/" class="btn btn-outline-dark">HOME</a>
         <a href="{{ route('users.index') }}" class="btn btn-outline-dark">VISUALIZAR CANDINDATOS</a>
     </nav>

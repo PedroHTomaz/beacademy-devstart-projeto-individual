@@ -12,7 +12,7 @@ Route::get('/', function () {
 });
 
 Route::get('/usuarios', [UserController::class, 'index'])->name('users.index');
-Route::get('/usuarios/cadastrar', [UserController::class, 'create'])->name('users.create');
+// Route::get('/usuarios/cadastrar', [UserController::class, 'create'])->name('register');
 Route::post('/usuarios/cadastrar', [UserController::class, 'store'])->name('users.store');
 
 Route::middleware(['auth'])->group(function () {
