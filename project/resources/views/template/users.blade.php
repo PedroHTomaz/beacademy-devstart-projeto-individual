@@ -22,7 +22,7 @@
             </form>
         @endif
         <a href="/" class="btn btn-outline-dark">HOME</a>
-        <a href="{{ route('users.index') }}" class="btn btn-outline-dark">VISUALIZAR CANDINDATOS</a>
+        <a href="{{ route('users.index') }}" class="btn btn-outline-dark">VISUALIZAR DEVs</a>
     </nav>
     <div class="container">
         @yield('body')

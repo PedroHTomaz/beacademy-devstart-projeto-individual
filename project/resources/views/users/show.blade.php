@@ -14,12 +14,14 @@
                     <span><strong>Escolaridade</strong>: {{ $user->education }}</span><br>
                     <span><strong>Data de cadastro</strong>: {{ $user->created_at }}</span><br>
                     @if(Auth::user()->is_admin == 1)
-                        <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning btn-sm">EDITAR</a>
-                        <form action="{{ route('users.destroy', $user->id) }}" method="POST">
-                            @method('DELETE')
-                            @csrf
-                            <button type="submit" class="btn btn-danger btn-sm">EXCLUIR</button>
-                        </form>
+                        <div class="d-flex gap-3 mt-3">
+                            <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning btn-sm">EDITAR</a>
+                            <form action="{{ route('users.destroy', $user->id) }}" method="POST">
+                                @method('DELETE')
+                                @csrf
+                                <button type="submit" class="btn btn-danger btn-sm">EXCLUIR</button>
+                            </form>
+                        </div>
                     @endif
                 </div>
             </div>
