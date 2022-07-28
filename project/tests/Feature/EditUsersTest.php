@@ -13,11 +13,6 @@ class EditUsersTest extends TestCase
     public function test_users_can_be_edited()
     {
         $user = User::factory()->create();
-        
-        $response = $this->post('/login', [
-            'email' => $user->email,
-            'password' => 'password',
-        ]);
 
         $this->actingAs($user);
 
@@ -30,7 +25,7 @@ class EditUsersTest extends TestCase
             'city' => 'Fortaleza',
         ]);
 
-        $response = $this->get('/usuarios');
+        $response = $this->get('/usuarios/'.$user->id,);
 
         $response->assertStatus(200);
     }

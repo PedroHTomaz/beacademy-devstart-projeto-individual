@@ -13,18 +13,13 @@ class DeleteUserTest extends TestCase
     public function test_delete_user()
     {
         $user = User::factory()->create();
-        
-        $response = $this->post('/login', [
-            'email' => $user->email,
-            'password' => 'password',
-        ]);
 
         $this->actingAs($user);
 
         $response = $this->delete('/usuarios/'.$user->id);
 
-        $response = $this->get('/usuarios');
+        $response = $this->get('/usuarios/'.$user->id);
 
-        $response->assertStatus(200);
+        $response->assertStatus(404);
     }
 }
