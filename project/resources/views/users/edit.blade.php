@@ -12,13 +12,13 @@
             @csrf
             <div class="form-group">
                 <label for="name" class="pb-2">Nome:</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome" required>
+                <input type="text" class="form-control" id="name" name="name" value="{{ $user->name }}" placeholder="Digite seu nome" required>
 
                 <label for="description" class="py-2">Breve descrição sobre você:</label><br>
-                <textarea name="about" id="about" class="form-control" maxlength="244" required></textarea>
+                <textarea name="about" id="about" class="form-control" maxlength="244" required>{{ $user->about }}</textarea>
                 
                 <label for="email" class="py-2">E-mail:</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required>
+                <input type="email" class="form-control" id="email" value="{{ $user->email }}" name="email" placeholder="Digite seu e-mail" required>
                 
                 <label for="password" class="py-2">Senha:</label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="Digite sua senha" required>
@@ -37,7 +37,7 @@
                 </div>
 
                 <label for="city" class="py-2">Cidade:</label>
-                <input type="text" class="form-control" id="city" name="city" placeholder="Digite sua cidade" required>
+                <input type="text" class="form-control" id="city" name="city" value="{{ $user->city }}" placeholder="Digite sua cidade" required>
             </div>
             <button type="submit" class="mt-3 btn btn-primary">Atualizar</button>
         </form>

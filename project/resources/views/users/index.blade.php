@@ -2,6 +2,11 @@
 @section('title', 'Contrata Dev - Visualizar Usuário')
 @section('body')
 <div class='container'>
+    @if(session('flash_message'))
+    <div class="alert alert-success">
+        {{session('flash_message')}}
+    </div>
+    @endif
     <h1>Usuários</h1>
     <div class="container">
         <div class="row">
@@ -19,7 +24,6 @@
         @foreach ($users as $user)
             <div class="col-sm-3">
                 <div class="card">
-                    <!--<img src="">-->
                     <div class="card-body">
                         <h4 class="card-title">{{ $user->name }}</h4>
                         <span>{{ $user->about }}</span><br>

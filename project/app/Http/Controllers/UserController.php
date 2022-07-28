@@ -38,7 +38,7 @@ class UserController extends Controller
 
         $this->model->create($data);
 
-        return redirect()->route('users.index');
+        return redirect()->route('users.index')->with('flash_message', 'Pronto! Cadastrado com sucesso.');
     }
 
     public function show($id)
@@ -72,7 +72,7 @@ class UserController extends Controller
 
         $user->update($data);
 
-        return redirect()->route('users.index');
+        return redirect()->route('users.index')->with('flash_message', 'Pronto! Editado com sucesso!');
     }
 
     public function destroy($id)
@@ -83,6 +83,6 @@ class UserController extends Controller
 
         $user->delete();
 
-        return redirect()->route('users.index');
+        return redirect()->route('users.index')->with('flash_message', 'Pronto! Excluido com sucesso.');
     }
 }
