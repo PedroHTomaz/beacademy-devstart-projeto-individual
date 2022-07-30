@@ -13,3 +13,4 @@ atributos;
 
 ## Minha solução
 * Achei interessante dar sentido ao CRUD, então fiz o "Contrata Dev". A ideia é ser um site onde desenvolvedores fazem seu cadastro de maneira simples e sem burocracia. Os empregadores, por sua vez, visualizam os perfis que acham interessantes, podendo entrar em contato com os Devs. Todos os requisitos foram atendidos.
+* O projeto pode ser conferido clicando [aqui.](http://projeto-individual-contratadev.herokuapp.com/)
